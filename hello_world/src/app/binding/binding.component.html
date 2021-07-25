@@ -1,0 +1,26 @@
+<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"-->
+<p>binding works!</p>
+<h1>{{name}}</h1>
+<input [id]="internal" type="text" value="attribute">
+<input disabled="{{false}}" id="{{internal}}" type="text" value="attribute">
+<input [disabled]="isdisable" id="{{internal}}" type="text" value="attribute">
+<button (click)="logMessage(myinput.value)">log</button>
+
+<h2 class="text-success">evolution</h2>
+<h2 [class]="successClass">class_binding</h2>
+<h2 [class.text-danger]="!hasError">line_9</h2>
+<h2 [ngClass]="messageClass">multiple_class-binding</h2>
+<!--style binding-->
+<h2 [style.color]="hasError ? 'red' : 'orange'">style_bindingM</h2>
+<h2 [style.color]="highlightcolor">style_binding2</h2>
+<h2 [ngStyle]="titleStyle">style_binding3</h2>
+
+
+<button (click)="onClick($event)">greet</button>
+<button (click)="greeting=name">Greet</button>
+{{greeting}}
+
+
+
+<input #myinput type="text">
+<button (click)="logMessage(myinput.value)">log</button>
